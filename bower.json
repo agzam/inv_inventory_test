@@ -1,0 +1,13 @@
+{
+  "name": "Inventory_App-1.2.0",
+  "version": "0.0.0",
+  "authors": [
+    "Ag Ibragimov <agzam.ibragimov@vevo.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "lodash": "~2.4.1",
+    "angular": "~1.2.16"
+  }
+}

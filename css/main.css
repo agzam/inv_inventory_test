@@ -1,0 +1,58 @@
+body{
+    font-family: Calibri;
+}
+.wrapper{
+    width:70%;
+    float:left;
+}
+.dataCol{
+    display:inline-table;
+    margin-left:20px;
+    text-transform: uppercase;
+    width: 22%;
+}
+hr{
+    border: solid 1px #E7E7E7;
+}
+.money{
+    padding-left: 10px;
+    font-size:x-small;
+    vertical-align: top;
+}
+.cellData{
+    margin-top: 2px;
+    maring-bottom: 2px;
+    font-size: x-small;
+    cursor: pointer;
+}
+.invItem{
+    width:30%;
+    height:400px;
+    float: left;
+    margin-top:4%;
+}
+.invItem span{
+    font-weight: bold;
+    color: darkgray;
+    padding-right: 10px;
+}
+.invItem .val{
+    color: #89858c;
+}
+.buttons{
+    font-size: xx-large;
+    font-weight: bold;
+}
+.buttons div{
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none; /* Chrome/Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+}
+.add{
+    color:green;
+}
+.subtract{
+    color:red
+}

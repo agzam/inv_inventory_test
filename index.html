@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Invitae"/>
+    <meta name="keywords" content="Invitae"/>
+
+
+
+    <!-- put your css here -->
+    <link href="css/main.css" rel="stylesheet"/>
+
+    <title>Invitae</title>
+</head>
+
+<body ng-app="app" ng-controller="appCtrl" ng-init="getData()">
+
+    <script type="text/ng-template" id="item.html">
+        <div class='invItem'>
+            <div class="buttons">
+                <div class="add" ng-click="addItem(i)">+</div>
+                <div class="subtract" ng-click="subtractItem(i)">&ndash;</div>
+            </div>
+            <div ng-repeat="(k,v) in i" >
+                <span>{{k}}</span> <span class="val">{{v}}</span>
+            </div>
+        </div>
+    </script>
+
+
+    <div class="wrapper" >
+    <div class="dataCol" ng-repeat="dd in departmentsData">
+        <div>{{dd.department}}</div>
+        <span>{{dd.inStockCount}}</span>
+        <span class="money">${{dd.toDateSpent | number :2}}</span>
+    </div>
+    <hr/>
+
+    <div ng-repeat="dd in departmentsData" class="dataCol">
+       <div ng-repeat="e in dd.elements">
+          <div class="cellData" ng-style="e.isActive && {'background':'#DDFCDD'}" ng-click="selectItem(e)">
+             <img src="{{e.picture}}" style="vertical-align: middle"/>
+             <span>{{e.guid}}</span>
+          </div>
+       </div>
+    </div>
+    </div>
+    <inv-item item="currentItem" data="departmentsData" ng-hide="!currentItem"></inv-item>
+    <!-- put your html here -->
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/lodash/dist/lodash.min.js"></script>
+    <script src="js/appCtrl.js"></script>
+</body>
+</html>
